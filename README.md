@@ -9,12 +9,12 @@ This folder contains two .csv files of the datasets used to train and test the b
 
    - `lentic_data/` contains the data used in the model for lentic systems.
    
-    __FW_ID__ , site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, in revision),
-    __Resource-Habitat__, typical habitat of the organisms used as baselines (Benthic or Pelagic),
-    __Resource_trophic_group__, trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
-    __d13C_baseline__ and __d15N_baseline__, isotopic values of the baselines used in the model (in per mil),
-    __Ecosystem_Type__, type of ecosystem (Lentic or Lotic),
-    __Latitude__, latitude of the site (in decimal degrees),
+    __FW_ID__  site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, in revision),
+    __Resource-Habitat__ typical habitat of the organisms used as baselines (Benthic or Pelagic),
+    __Resource_trophic_group__ trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
+    __d13C_baseline__ and __d15N_baseline__ isotopic values of the baselines used in the model (in per mil),
+    __Ecosystem_Type__ type of ecosystem (Lentic or Lotic),
+    __Latitude__ latitude of the site (in decimal degrees),
     __Longitude__, longitude of the site (in decimal degrees),
     __Elevation__, elevation above sea level of the site (in meters),
     __Lake_area_km2__, area of the lake (in km2),
@@ -58,23 +58,28 @@ This folder contains two .csv files of the datasets used to train and test the b
 ## 3. **How to use the models for baselines predictions**
 __ Scripts __
    - Run `check_optimized_models` to check models'specifications, outputs and performances
-   - The script __'Use_models_to_predict_baselines.R'__ provides examples of how to simulate baselines for a given lake or river site.
+   - The script __`Use_models_to_predict_baselines.R`__ provides examples of how to simulate baselines for a given lake or river site.
 
 __ Objects __
    
-   - `model_C_lotic.RData` and 'model_N_lotic.RData' contains the models used to predict the d13C and d15N baselines in lotic systems.
-   - `model_C_lentic.RData` and 'model_N_lentic.RData' contain the models used to predict the d13C and d15N baselines in lentic systems
+   - `model_C_lotic.RData` and `model_N_lotic.RData` contains the models used to predict the d13C and d15N baselines in lotic systems.
+   - `model_C_lentic.RData` and `model_N_lentic.RData` contain the models used to predict the d13C and d15N baselines in lentic systems
 
 ___ Dependencies __
-Running the scripts requires the following librairies : tidyr,dplyr,mgcv
+
+Running the scripts requires the following librairies : tidyr, dplyr, mgcv
 
 The models were built under R version 4.4.2 (2024-10-31), Platform: aarch64-apple-darwin20
 Running under: macOS Sequoia 15.6.1
 attached base packages:
-stats     graphics  grDevices utils     datasets methods   base     
+stats, graphics, grDevices utils, datasets, methods, base     
 
 other attached packages:
-gam.hp_0.0-2  GGally_2.2.1  mgcv_1.9-1  tidyr_1.3.1  dplyr_1.1.4 
+gam.hp_0.0-2  
+GGally_2.2.1  
+mgcv_1.9-1  
+tidyr_1.3.1  
+dplyr_1.1.4 
 
 
    
