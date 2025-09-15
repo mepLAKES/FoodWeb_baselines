@@ -81,5 +81,19 @@ mgcv_1.9-1
 tidyr_1.3.1  
 dplyr_1.1.4 
 
+## 4. **Running with Docker**
 
-   
+If you have Docker installed on your system, you can load the models and run the test scripts directly from the Docker container.
+First build the container:
+
+```bash
+docker build --tag "foodweb" .
+```
+
+and finally run the container:
+
+```bash
+docker run --rm -ti -p 8787:8787 foodweb
+```
+
+You can then open the page http://localhost:8787/ on your web browser and navigate and source the scripts of interest.
