@@ -9,8 +9,8 @@
 # LAKES/LENTIC SITES: Latitude, Longitude, Elevation, Lake area, Human footprint
 # RIVERS/LOTIC SITES: Annual average air temp, Strahler order,
 #annual cumulated precipitation,average soil organic content,annual average discharge,human population count
-# Date: 09 SEpt 2025
-# Authors:@XX
+# Date: 09 Sept 2025
+# Authors:@marie-elodie Perga
 # ==============================================================================
 # LOAD REQUIRED LIBRARIES AND MODELS
 # ==============================================================================
