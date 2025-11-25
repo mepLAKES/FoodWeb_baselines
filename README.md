@@ -9,7 +9,7 @@ This folder contains two .csv files of the datasets used to train and test the b
 
    - `lentic_data/` contains the data used in the model for lentic systems.
    
-    __FW_ID__  site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, in revision),
+    __FW_ID__  site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, 2025),
     __Resource-Habitat__ typical habitat of the organisms used as baselines (Benthic or Pelagic),
     __Resource_trophic_group__ trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
     __d13C_baseline__ and __d15N_baseline__ isotopic values of the baselines used in the model (in per mil),
@@ -29,7 +29,7 @@ This folder contains two .csv files of the datasets used to train and test the b
     
    - `lotic_data/` contains the data used in the model for lotic systems.
    
-    __FW_ID__, site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, in revision),
+    __FW_ID__, site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset (Bouletreau et al, 2025),
     __Resource-Habitat__, typical habitat of the organisms used as baselines (Benthic or Pelagic),
     __Resource_trophic_group__, trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
     __d13C_baseline__ and __d15N_baseline__, isotopic values of the baselines used in the model (in per mil),
@@ -47,13 +47,16 @@ This folder contains two .csv files of the datasets used to train and test the b
     __hft_ix_c09__, Human footprint index (dimensionless).
 
 ## 2. **Outputs of the optimized models**
-   -`datasets_observed_predicted_baselines.csv` contains for all sites the observed baselines values and the predicted values from the models.
-   __FW_ID__, site identifier. 
-   __Hab__, typical habitat of the organisms used as baselines (Benthic or Pelagic),
-   __Trophic__, trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
-   __d13C_observed__ and __d15N_observed__, measured isotopic values of the baselines  (in per mil),
-   __d13C_predicted__ and __d15N_predicted__, measured isotopic values of the baselines  (in per mil),
-   __Ecosystem_Type__, type of ecosystem (Lentic or Lotic),
+   -`observed_predicted_isotope_baselines./` contains for all sites the observed baselines values and the predicted values from the models.
+
+      __FW_ID__, site identifier. can be related to the site name and other characteristics from the ISOFRESH dataset,
+    __Resource-Habitat__, typical habitat of the organisms used as baselines (Benthic or Pelagic),
+    __Resource_Trophic_group__, trophic group of the organisms used as baselines (Primary_resource or Primary_consumer),
+    __d13C__ and __d15N__, isotopic values of the baselines used in the model (in per mil),
+    __Ecosystem_Type__, type of ecosystem (Lentic or Lotic),
+    __SE_d13C__ and __SE_d15N__, standard error of the isotopic values of the baselines  (in per mil),only for predicted values,
+    __Data_Type__, whether isotope values were measured on the field (Observed) or simulated by the models (Predicted). 
+   
 
 ## 3. **How to use the models for baselines predictions**
 __ Scripts __
@@ -81,7 +84,15 @@ mgcv_1.9-1
 tidyr_1.3.1  
 dplyr_1.1.4 
 
-## 4. **Running with Docker**
+
+## 4. **How to reproduce the full analysis**
+These codes and data underly the paper "A global estimator of C and N isotope baselines for freshwaters" by Perga et al.
+
+It allows to check computations and models therein and to rerun the baselines estimations for new freshwater sites.
+Please be aware that those simulations are useful for macro-ecological approaches (i.e., to compare sites at a large geographical scale) but not for single-site studies.
+It contains its own READme file for further information.
+
+## 5. **Running with Docker**
 
 If you have Docker installed on your system, you can load the models and run the test scripts directly from the Docker container.
 First build the container:
