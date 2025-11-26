@@ -92,6 +92,8 @@ It allows to check computations and models therein and to rerun the baselines es
 Please be aware that those simulations are useful for macro-ecological approaches (i.e., to compare sites at a large geographical scale) but not for single-site studies.
 It contains its own READme file for further information.
 
+[![DOI](https://zenodo.org/badge/962642773.svg)](https://doi.org/10.5281/zenodo.17718458)
+
 ## 5. **Running with Docker**
 
 If you have Docker installed on your system, you can load the models and run the test scripts directly from the Docker container.
